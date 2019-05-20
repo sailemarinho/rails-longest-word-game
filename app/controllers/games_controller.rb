@@ -2,7 +2,7 @@ require 'open-uri'
 require 'json'
 class GamesController < ApplicationController
   def new
-    @letters = ('a'..'m').to_a.shuffle
+    @letters = ('a'..'z').to_a.sample(13)
   end
 
   def score
@@ -23,4 +23,3 @@ class GamesController < ApplicationController
     end
   end
 end
-
